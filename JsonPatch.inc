@@ -293,7 +293,7 @@ class JsonPatch
 
   // Dispatch to a recursive diff_assoc or diff_array call if needed,
   // or emit a patch to replace the current value.
-  private static function diff_values($path, $value, $other)
+  public static function diff_values($path, $value, $other)
   {
     // manually handle the {}-looks-like-[] case, when other is associative
     if ((count($value) == 0 || count($other) == 0)
